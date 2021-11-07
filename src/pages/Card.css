@@ -1,0 +1,108 @@
+.card_img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    user-select: none;
+    margin-right: 3em;
+    margin-bottom: 5em;
+    border: 3px solid #353535;
+    z-index: 10;
+    position: relative;
+}
+
+.card{
+    width: 100%;
+    perspective: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_container{
+    width: 285px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px 1px rgba(204, 204, 204, 0.336);
+    background-color: #1d1f21;
+    color: #fff;
+    position: relative;
+    cursor: grab;
+}
+
+.circle_wrapper{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    border-top-right-radius: 18px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.circle{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: -4.2em;
+    right: -10em;
+    z-index: 5;
+    background-color: #fbbe01;
+    border-radius: 50%;
+}
+
+.card_top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1.2;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding: 1em 15px; */
+}
+
+.card_bottom{
+    display: flex;
+    flex: 0.8;
+    padding: 0 1em;
+    position: relative;
+    z-index: 2;
+}
+
+.card_text{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 10px 10px 10px;
+}
+
+.img_wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_heading{
+    position: absolute;
+    z-index: 2;
+    font-size: 24px;
+    top: 0;
+    left: 0;
+}
+
+.card_desc{
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    text-align: left;
+}

@@ -1,0 +1,8 @@
+.cardPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    height: 100vh;
+    overflow: hidden;
+}
