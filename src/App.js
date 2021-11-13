@@ -4,16 +4,23 @@ import './App.css';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db, provider } from './firebase';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useLocation
 } from "react-router-dom";
-import Service from './Service';
+import Service from './pages/Service';
 import Design1 from './pages/Design1';
 import CardPage from './pages/CardPage';
+import ParticleBackground from './components/ParticleBackground';
+import {AnimatePresence} from "framer-motion";
+import Main from './pages/Main';
+import Register from './pages/Register';
+import Menu from './pages/Menu';
 
 function App() {
+
+  const location = useLocation();
   
   const [user] = useAuthState(auth);
 
@@ -84,22 +91,33 @@ function App() {
     ))
   },[user])
 
+
+
+
   return (
     <div className="App">
-      <Router>
-        <>
-          <Switch>
-            <Route path="/D1">
-              <Design1/>
+      <>
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.pathname}>
+            <Route path="/main">
+              {/* <ParticleBackground/> */}
+              <Main/>
             </Route>
             <Route path="/D2">
               <CardPage/>
+            </Route>
+            <Route path="/register">
+              <Register/>
+            </Route>
+            <Route path="/store/:storeID">
+              <Menu/>
             </Route>
             <Route path="/:serviceId">
               <Service/>
             </Route>
             <Route path="/">
-            <h1>nigger </h1>
+              <Design1/>
+            {/* <h1>nigger </h1>
 
               {user && 
                 <div className="dadad">
@@ -141,11 +159,11 @@ function App() {
                     )}
                   </div>
                 </div>
-              }
+              } */}
             </Route>
           </Switch>
-        </>
-      </Router>
+        </AnimatePresence>
+      </>
     </div>
   );
 }

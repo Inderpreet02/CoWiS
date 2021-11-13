@@ -1,0 +1,105 @@
+.service{
+    min-height: 100vh;
+}
+.service__container{
+    display: flex;
+    max-width: 1400px;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+}
+
+.service__img{
+    max-width: 400px;
+    min-width: 400px;
+    object-fit: contain;
+}
+
+.service__genInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 250px;
+}
+
+.org__name{
+    font-size: 5em;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.org__desc{
+    text-align: left;
+    max-width: 400px;
+    font-size: 1em;
+    line-height: 1.1em;
+    color: rgb(131, 131, 131);
+}
+
+.org__desc > span{
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.service__br{
+    padding-bottom: 10px;
+}
+
+.service__create{
+    margin-top: 100px;
+    background-color: #ccc;
+    padding: 20px;
+    color: #141414;
+    border-radius: 10px;
+    max-width: 700px;
+
+}
+
+.create__heading{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #141414;
+}
+
+.service__field{
+    display: flex;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.service__label{
+    min-width: 150px;
+}
+
+.service__input{
+    border: none;
+    border-radius: 5px;
+    padding: 2px 4px;
+    min-width: 200px;
+}
+
+.service__btn{
+    border: 1px solid #141414;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    font-size: 16px;
+}
+
+.manage__container{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+}
+
+.manage__heading{
+    margin-top: 100px;
+    font-size: 3em;
+
+}

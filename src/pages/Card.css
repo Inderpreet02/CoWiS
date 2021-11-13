@@ -6,6 +6,7 @@
     user-select: none;
     margin-right: 3em;
     margin-bottom: 5em;
+    margin-left: -80px;
     border: 3px solid #353535;
     z-index: 10;
     position: relative;
@@ -17,6 +18,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 20px;
+    margin-top: 60px;
+    margin-right: 40px;
 }
 
 .card_container{

@@ -1,0 +1,20 @@
+.menuItem{
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 600px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__itemImg{
+    max-width: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.item__main{
+    display: flex;
+    align-items: center;
+}

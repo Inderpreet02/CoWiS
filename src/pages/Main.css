@@ -1,0 +1,162 @@
+.main{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.main__container{
+    width: 100vw;
+}
+
+.main__section1{
+    width: 100%;
+    height: 79.4vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 100%;
+    width: calc(100vw- 64px);
+    max-width: calc(100vw- 64px);
+}
+.main__heading{
+    font-size: 7rem;
+    line-height: 1.1;
+    letter-spacing: -.04em;
+    margin-top: 40px;
+    font-weight: 600;
+    text-align: left;
+    padding: 50px;
+    z-index: 10;
+}
+
+.main__desc{
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.4;
+    letter-spacing: -.04em;
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 50px;
+    z-index: 10;
+}
+
+.circle__wrapperMain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circle__main{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    bottom: -550px;
+    right: -10em;
+    z-index: 5;
+    background-color: #fbbe01;
+    border-radius: 100%;
+}
+
+.main__section2{
+    padding: 100px 0 100px 0px;
+    height: 100vh;
+}
+
+.addcard__container{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+
+.main__section3{
+    position: relative;
+    width: 100%;
+    height: 79.4vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 100%;
+    width: calc(100vw- 64px);
+    max-width: calc(100vw- 64px);
+}
+
+.circle__wrapperMain2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circle__main2{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    top: -500px;
+    right: -10em;
+    z-index: 5;
+    background-color: #fb4801;
+    border-radius: 100%;
+}
+
+.sec3__heading{
+    text-align: left;
+    font-size: 7rem;
+    line-height: 1.1;
+    letter-spacing: -.04em;
+    z-index: 10;
+}
+
+.sec3__btn{
+    text-align: left;
+    margin-top: 100px;
+    font-size: 20px;
+    padding: 15px 25px;
+    border: 1px solid #fff;
+    width: fit-content;
+    background-color: #121212;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.sec3__work{
+    text-align: left;
+    margin: 100px 0 0 150px;
+    width: 500px;
+    z-index: 10;
+
+}
+
+.work__clints,.work__services{
+    display: flex;
+    padding: 20px;
+    margin: 5px;
+    border-top: 1px solid #313131;
+}
+
+.clints_no, .services_no{
+    font-size: 6em;
+    z-index: 1000;
+    color: rgb(141, 141, 141);
+    margin-right: 100px;
+}
+
+.clints__text, .sercvices__text{
+    font-size: 1em;
+}

@@ -2,9 +2,11 @@ import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../firebase';
 import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useHistory, useParams } from 'react-router'
 import "./Card.css"
+import { Link } from 'react-router-dom';
 
-function Card() {
+function Card( { name, desc, photoURL, id, enable} ) {
 
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -13,10 +15,25 @@ function Card() {
     const rotateX2 = useTransform(y, [-20, 20], [10, -10]);
     const rotateY2 = useTransform(x, [-20, 20], [-10, 10]);
 
+
     const [user] = useAuthState(auth);
-    console.log(user);
+    const {serviceId} = useParams();
+    const history = useHistory();
+
+    const handleRoute = (e)=>{
+
+        e.preventDefault();
+
+        if(user.uid === serviceId){
+            history.push(`./store/${id}`)
+            console.log("Done");
+        }else {
+            console.log("Done");
+        }
+    }
+
     return (
-        <div className="card">
+        <div className="card" onClick={handleRoute}>
             <motion.div
                 style={{x, y, rotateX, rotateY, z: 100}}
                 drag
@@ -36,7 +53,7 @@ function Card() {
                             drag
                             dragElastic={0.8}
                             dragConstraints= {{ top: 0, left: 0, right: 0, bottom: 0}}
-                            src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F13%2F2015%2F04%2F05%2Ffeatured.jpg&q=85" alt="" className="card_img" />}
+                            src={photoURL} alt="" className="card_img" />}
                     </div>
                 </div>
 
@@ -49,7 +66,7 @@ function Card() {
 
                         className="card_text">
                         <div className="card_heading">
-                            Chitkara University
+                            {name}  
                         </div>
 
                         <p className="card_desc">
